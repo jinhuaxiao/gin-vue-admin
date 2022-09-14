@@ -48,7 +48,7 @@
               </template>
             </el-input>
           </el-form-item>
-          <el-form-item prop="captcha">
+          <!-- <el-form-item prop="captcha">
             <div class="vPicBox">
               <el-input
                 v-model="loginFormData.captcha"
@@ -64,7 +64,7 @@
                 >
               </div>
             </div>
-          </el-form-item>
+          </el-form-item> -->
           <el-form-item>
             <el-button
               type="primary"
@@ -152,7 +152,7 @@ const loginVerify = () => {
     loginFormData.captchaId = ele.data.captchaId
   })
 }
-loginVerify()
+// loginVerify()
 
 // 登录相关操作
 const lock = ref('lock')
@@ -188,7 +188,7 @@ const submitForm = () => {
     if (v) {
       const flag = await login()
       if (!flag) {
-        loginVerify()
+        // loginVerify()
       }
     } else {
       ElMessage({
@@ -196,7 +196,7 @@ const submitForm = () => {
         message: '请正确填写登录信息',
         showClose: true,
       })
-      loginVerify()
+      // loginVerify()
       return false
     }
   })
